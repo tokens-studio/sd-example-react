@@ -13,28 +13,26 @@ function App() {
   };
 
   return (
-    <>
+    <div
+      className="app"
+      style={{
+        background: theme.bg.muted.$value,
+      }}
+    >
+      <button onClick={toggleTheme}>{isDarkTheme ? "Light" : "Dark"}</button>
+
       <div
-        className="app"
         style={{
-          background: theme.bg.muted.$value,
+          background: theme.card.background.$value,
+          borderRadius: theme.card.borderRadius.$value,
+          padding: theme.card.padding.$value,
+          color: theme.fg.default.$value,
+          boxShadow: theme.boxShadow.default.$value,
         }}
       >
-        <button onClick={toggleTheme}>{isDarkTheme ? "Light" : "Dark"}</button>
-
-        <div
-          style={{
-            background: theme.card.background.$value,
-            borderRadius: theme.card.borderRadius.$value,
-            padding: theme.card.padding.$value,
-            color: theme.fg.default.$value,
-            boxShadow: theme.boxShadow.default.$value,
-          }}
-        >
-          <h1>Card</h1>
-        </div>
+        <h1>Card</h1>
       </div>
-    </>
+    </div>
   );
 }
 
