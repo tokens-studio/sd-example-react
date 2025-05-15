@@ -18,7 +18,9 @@ const tokenWatcherPlugin = () => ({
 
     server.watcher.add("tokens/**/*.json");
     server.watcher.on("change", async (filePath) => {
-      if (!(filePath.includes("tokens/") && filePath.endsWith(".json"))) return;
+      const isTokenFile =
+        filePath.includes("tokens/") && filePath.endsWith(".json");
+      if (!isTokenFile) return;
       await tryBuildTokens();
     });
   },
