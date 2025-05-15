@@ -7,7 +7,7 @@ const tryBuildTokens = async () => {
   try {
     await buildTokens();
   } catch (error) {
-    console.error(`Initial token build error: ${error.message}`);
+    console.error(`Token build error: ${error.message}`);
   }
 };
 
