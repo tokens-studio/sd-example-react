@@ -30,7 +30,7 @@ export default defineConfig({
   base: process.env.GITHUB_PAGES === "true" ? "/ds-example-react/" : "/",
   resolve: {
     alias: {
-      "@tokens": path.resolve(__dirname, "./tokens_compiled"),
+      "@tokens": path.resolve(__dirname, "./dist/tokens"),
     },
   },
 });

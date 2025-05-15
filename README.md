@@ -12,3 +12,5 @@ npm run dev
 Tokens will be built using [StyleDictionary](https://styledictionary.com/) from the [tokens directory](./tokens).
 
 The vite watcher will automatically rebuild tokens and inject them in the the react app.
+
+Built tokens will be stored in `./dist/tokens`
