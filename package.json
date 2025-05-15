@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run build:tokens && vite",
-    "build": "GITHUB_PAGES=true npm run build:tokens && vite build",
-    "build:tokens": "node style-dictionary-builder.js",
+    "dev": "vite",
+    "build": "npm run tokens:build && vite build",
+    "tokens:build": "node style-dictionary-builder.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",

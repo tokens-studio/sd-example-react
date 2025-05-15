@@ -44,7 +44,7 @@
   "shadows": {
     "default": {
       "$type": "color",
-      "$value": "rgba({colors.black}, 0.3)"
+      "$value": "rgba({colors.black}, 0.95)"
     }
   }
 }

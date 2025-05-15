@@ -17,13 +17,10 @@ function App() {
       <div
         className="app"
         style={{
-          background: theme.fg.default.$value,
-          color: theme.bg.default.$value,
+          background: theme.bg.muted.$value,
         }}
       >
-        <button onClick={toggleTheme}>
-          Toggle theme {isDarkTheme ? "🌙" : "☀️"}
-        </button>
+        <button onClick={toggleTheme}>{isDarkTheme ? "Light" : "Dark"}</button>
 
         <div
           style={{
@@ -31,6 +28,7 @@ function App() {
             borderRadius: theme.card.borderRadius.$value,
             padding: theme.card.padding.$value,
             color: theme.fg.default.$value,
+            boxShadow: theme.boxShadow.default.$value,
           }}
         >
           <h1>Card</h1>

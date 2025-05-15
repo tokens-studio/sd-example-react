@@ -3,7 +3,7 @@ import { register } from "@tokens-studio/sd-transforms";
 
 register(StyleDictionary);
 
-function generateConfig(name, sources, buildPath = "tokens_compiled/") {
+const generateConfig = (name, sources, buildPath = "tokens_compiled/") => {
   return {
     source: sources,
     platforms: {
@@ -46,7 +46,7 @@ function generateConfig(name, sources, buildPath = "tokens_compiled/") {
       },
     },
   };
-}
+};
 
 const configs = {
   light: generateConfig("light", [
@@ -61,11 +61,13 @@ const configs = {
   ]),
 };
 
-async function run() {
+export const buildTokens = async () => {
   for (const cfg of Object.values(configs)) {
     const sd = new StyleDictionary(cfg);
     await sd.buildAllPlatforms();
   }
-}
+};
 
-run();
+if (import.meta.url === import.meta.resolve(process.argv[1])) {
+  buildTokens();
+}
