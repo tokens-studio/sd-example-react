@@ -1,4 +1,4 @@
-# Using tokens using StyleDictionary with React
+# Building on tokens using StyleDictionary with React
 
 A simple example of using multi file tokens exported via [tokens.studio](https://tokens.studio/) or [penpot](https://penpot.app/).
 
