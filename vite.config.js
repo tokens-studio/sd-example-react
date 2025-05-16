@@ -32,7 +32,7 @@ export default defineConfig({
   base: "/sd-example-react/",
   resolve: {
     alias: {
-      "@tokens": path.resolve(__dirname, "./dist/tokens"),
+      "@tokens": path.resolve(__dirname, "./.cache/tokens"),
     },
   },
 });
