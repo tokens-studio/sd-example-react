@@ -3,7 +3,7 @@ import { register } from "@tokens-studio/sd-transforms";
 
 register(StyleDictionary);
 
-const generateConfig = (name, sources, buildPath = ".cache/tokens/") => {
+const generateConfig = (name, sources, buildPath = "src/.cache/tokens/") => {
   return {
     source: sources,
     platforms: {
