@@ -1,5 +1,7 @@
 # Building on tokens using StyleDictionary with React
 
+Preview: https://tokens-studio.github.io/sd-example-react/
+
 A simple example of using multi file tokens exported via [tokens.studio](https://tokens.studio/) or [penpot](https://penpot.app/).
 
 To test simply run
