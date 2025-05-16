@@ -27,12 +27,13 @@ const tokenWatcherPlugin = () => ({
 });
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react(), tokenWatcherPlugin()],
-  base: "/sd-example-react/",
+  // Only use the base path for production builds (when deploying to GitHub Pages)
+  base: command === 'build' ? "/sd-example-react/" : "/",
   resolve: {
     alias: {
       "@tokens": path.resolve(__dirname, "./.cache/tokens"),
     },
   },
-});
+}));
