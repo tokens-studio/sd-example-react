@@ -29,7 +29,7 @@ const tokenWatcherPlugin = () => ({
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tokenWatcherPlugin()],
-  base: process.env.GITHUB_PAGES === "true" ? "/ds-example-react/" : "/",
+  base: "/sd-example-react/",
   resolve: {
     alias: {
       "@tokens": path.resolve(__dirname, "./dist/tokens"),
