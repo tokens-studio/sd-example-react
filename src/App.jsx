@@ -13,6 +13,8 @@ function App() {
 
   return (
     <div
+      // Force refresh when theme is updated in development
+      key={process.env.NODE_ENV === "development" && light + dark}
       className="app"
       style={{
         background: theme.bg.muted.$value,
